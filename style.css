@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    margin: 0;
+}
+
+
+body{
+    background-image: url(./images/imagen-seguridad2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+*{
+    background: none;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+
+}
+
+.logo{
+    padding-top: 10px;
+    margin-left: 10;
+    width: 5%; /*hay que ir probando las dimensiones esto es para la imagen o el logo*/
+}
+
+main{
+    display: flex;
+    margin-bottom: 50px;
+    margin-left: 80px;
+
+}
+
+.text-area{
+    border: none;
+    color: #0a3871;
+    margin-top: 90px;
+    text-transform: lowercase;
+}
+
+::placeholder { color: white;}
+    .text-area:focus {
+        color: white;
+        outline: none;
+    }
+
+.mensaje-encriptado{
+    background: black;  
+    background-image: url(./images/loading2.gif);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 24px;
+    color: white;
+    margin-left: 254px;
+    margin-top: 40px;
+    padding-left: 20px;
+    
+}
+
+
+.mensaje-encriptado:focus {
+    outline: none;
+}
+
+.botones{
+    display: flex;
+    margin-top: 18px;
+}
+
+.botones-encriptado{
+    display: flex;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.boton-encriptar{
+    background-color: #0a3871;
+    border: 1px solid #0a3871;
+    border-radius: 24px;
+    color: white;
+    cursor: pointer;
+    height: 67px;
+    width: 328px;
+}
+
+.boton-desencriptar{
+    background: #d8dfe8;
+    border: 1px solid #0a3871;
+    border-radius: 24px;
+    color: #0a3871;
+    cursor: pointer;
+    height: 67px;
+    margin-left: 30px;
+    width: 328px;
+}
+
+section:nth-child(2) {
+    position: relative;
+}
+
+.boton-copiar{
+    border: 1px solid white;
+    border-radius: 24px;
+    color: white;
+    cursor: pointer;
+    height: 50px;
+    margin-top: -100px;
+    margin-left: 320px;
+    margin-right: 50px;
+    width: 100px;
+    font-size: 20px;
+    
+}
+
+.boton-limpiar{
+    border: 1px solid white;
+    border-radius: 24px;
+    color: white;
+    cursor: pointer;
+    height: 50px;
+    margin-top: -100px;
+    width: 100px;
+    font-size: 20px;
+}
+
+.informacion{
+    color: white;
+    font-size: 18px;
+}
+
+.footer{
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.mensaje-notificacion {
+    display: none; /* Oculta el mensaje por defecto */
+    position: fixed; /* Fija la posición del mensaje */
+    top: 10px; /* Ajusta la posición vertical */
+    left: 50%; /* Centra horizontalmente */
+    transform: translateX(-50%); /* Centra horizontalmente */
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 100; /* Asegúrate de que el mensaje esté por encima de otros elementos */
+  }
+
+
+
+.mensaje-error {
+    color: red;
+    font-weight: bold;
+    display: none; /* Oculta el mensaje por defecto */
+  }

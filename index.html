@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/llave.png" type="image/x-icon">
+    <title>Encriptador de texto</title>
+</head>
+<body>
+    <header>
+        <img class="logo" src="./images/logo2.png" alt="Logo Alura" >
+    </header>
+    <main>
+        <section>
+            
+            <textarea class="text-area" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+            <h6 class="informacion">Ingrese solo letras minúsculas y sin acentos</h6>
+            <div class="botones">
+                <button class="boton-encriptar" onclick="botonEncriptar()">Encriptar</button>
+                <button class="boton-desencriptar" onclick="botonDesencriptar()">Desencriptar</button>
+            </div>
+        </section>
+        <section> 
+            <textarea id="mensaje-encriptado" class="mensaje-encriptado" cols="20" rows="10"></textarea>
+            <div class="botones-encriptado">
+                <button id="copiar" class="boton-copiar">Copiar</button>
+                <button id="limpiar" class="boton-limpiar" onclick="limpiarCampo()">Limpiar</button>
+            </div>
+        </section>
+        <div id="mensaje-notificacion" class="mensaje-notificacion"></div>
+        <div id="mensaje-error" class="mensaje-error"></div>
+    </main>
+    <footer>
+        <p class="footer">Desarrollado por Alejandro Landeta C. - 2024</p>
+    </footer>
+<script src="scrip.js"></script>
+<script>
+    document.getElementById("copiar").addEventListener("click", () => {
+      let textarea = document.getElementById("mensaje-encriptado");
+      if (textarea.value) {
+        textarea.select();
+        navigator.clipboard.writeText(textarea.value);
+        mostrarNotificacion("Texto copiado a portapapeles");
+      } else {
+        mostrarNotificacion("No hay texto para copiar");
+      }
+    });
+  </script>
+
+</body>
+</html>
